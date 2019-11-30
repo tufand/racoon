@@ -41,7 +41,7 @@ if
 	[[ -n "$VPN_MY_NETWORKS" ]]
 then
 	cat > /etc/conf.d/racoon <<-CONF
-		path pre_shared_key "/etc/racoon/psk.txt";
+		path pre_shared_key "/etc/conf.d/psk.txt";
 		remote $VPN_TUNNEL_ADDR {
 			exchange_mode main,aggressive;
 			nat_traversal force;
