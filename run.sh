@@ -33,7 +33,7 @@ if
 	[[ -n "$VPN_TUNNEL_ADDR" ]] &&
 	[[ -f /vpn-psk ]]
 then
-	printf '%s %s\n' "$VPN_TUNNEL_ADDR" "$(cat /vpn-psk)" > /etc/conf.d/psk.txt
+	printf '%s %s\n' "$VPN_TUNNEL_ADDR" "$(cat /vpn-psk)" > /etc/conf.d/psk.txt && chmod 600 /etc/conf.d/psk.txt
 fi
 
 if
